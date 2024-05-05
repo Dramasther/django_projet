@@ -7,4 +7,9 @@
         Published {{ post.publish }} by {{ post.author }}
     </p>
     {{ post.body|linebreaks }}
+    <p>
+        <a href="{% url "secondapp:post_share" post.id %}">
+        Share this post
+        </a>
+    </p>
 {% endblock %}
